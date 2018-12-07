@@ -1,6 +1,7 @@
 package projeto.dawii.lucas.beans;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -23,6 +24,10 @@ public class ServidorBean implements Serializable{
 	@PostConstruct
 	public void init() {
 		entidade = newEntidade();
+		ArrayList<String> servidores = new ArrayList<>();
+		servidores.add("José");
+		servidores.add("Pedro");
+		entidade.setServidores(servidores);
 		entidades = getService().getAll();
 	}
 	

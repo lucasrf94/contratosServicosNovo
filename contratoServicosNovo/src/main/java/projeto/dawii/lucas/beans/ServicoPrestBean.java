@@ -77,7 +77,7 @@ public class ServicoPrestBean {
 	}
 
 	public void adicionarServicoPrest() {
-		servico.setId_serv(contador++);
+		servico.setId_serv((long) contador++);
 		servicos.add(servico);
 		servico = new ServicoPrest();
 	}

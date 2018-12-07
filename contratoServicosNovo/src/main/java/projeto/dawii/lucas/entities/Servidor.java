@@ -1,5 +1,6 @@
 package projeto.dawii.lucas.entities;
 
+import java.util.ArrayList;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +21,7 @@ public class Servidor implements Identificavel {
 	private String telefone;
 	private String endereco;
 	private String cidade;
-	private ServicoPrest servicoPrest;
+	private ArrayList<String> servidores;
 	private int custoMinimo;
 
 	public Servidor() {
@@ -74,14 +75,7 @@ public class Servidor implements Identificavel {
 
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
-	}
-
-	public ServicoPrest getServicoPrest() {
-		return servicoPrest;
-	}
-
-	public void setServicoPrest(ServicoPrest servicoPrest) {
-		this.servicoPrest = servicoPrest;
+	
 	}
 
 	public int getCustoMinimo() {
@@ -90,5 +84,13 @@ public class Servidor implements Identificavel {
 
 	public void setCustoMinimo(int custoMinimo) {
 		this.custoMinimo = custoMinimo;
+	}
+
+	public ArrayList<String> getServidores() {
+		return servidores;
+	}
+
+	public void setServidores(ArrayList<String> servidores) {
+		this.servidores = servidores;
 	}
 }
